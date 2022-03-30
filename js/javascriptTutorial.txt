@@ -1,0 +1,49 @@
+
+normal function - function myFunc() {}
+Arrow function - const myFunc = () => {} . Better because "this" keyword behaves normally and better than when used in 
+the normal function.
+------------------------------
+How to import and export a function:
+export default person. -> This is the default export.
+to import the default -> import person from 'link of js data'. ----you can generically name the import with anyhow you want----
+
+multiple exports example:
+export const clean = () => {}
+export const baseData = 10;
+-----import-------
+import {baseData} from 'link to js file'. Curly braces expicitly target specific things from the imported file.
+import {clean} from 'link to js file'
+--------------------------------------------------
+Spread and Rest operator
+Rest usage -> function myFunc(...args) {} //the three dots are used to get multiple arguments. Would be merged into an array
+Spread usage -> const newArray = [...oldArray, 1, 2] //used to split up array elements
+const newObject = {...oldObject, newProp:5} //OR object properties
+---------example use-------
+const Person = {
+    name: "Max",
+    age: 54
+}
+
+const newPerson = {
+    ...Person,
+    address: "50 Bodija Estate, Ibadan"
+}
+
+console.log(newPerson);
+-------------------------------------
+Destructuring:
+array destructuring -> [a,b] = ["Hello","Max"];
+console.log(a) //Hello
+console.log(b) //Max
+OR
+const numbers = [1,2,3];
+[num1, num2] = numbers;
+console.log(num1, num2);
+[num1, ,num3] = numbers;
+console.log(num1, num3);
+
+object destructuring -> {name} = {name: 'Max', age:28}
+console.log(name) //Max
+
+---- Refresh array functions**
+array.map()
